@@ -1,0 +1,152 @@
+* {
+  transition: 0.3s;
+}
+body {
+  font-family: "Catamaran", sans-serif;
+  background-color: rgb(169, 169, 169);
+}
+#hero {
+  overflow: hidden;
+}
+.listsa {
+  animation: animateMenu 0.2s linear forwards;
+}
+
+.elite-logo {
+  width: auto;
+  height: auto;
+  max-width: 250px;
+  max-height: 72px;
+}
+.header-css {
+  background-color: rgb(169, 169, 169);
+}
+.nav-bar {
+  background-color: rgba(6,19,36,255);
+}
+.head {
+  color: #d6b067;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.my-auto,
+footer {
+  color: #d6b067;
+}
+.imageDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.my-heading {
+  color: #d6b067;
+}
+.image-1 {
+  background-image: url("movingimg-1.jpeg");
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.image-2 {
+  background-color: black;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.image-4 {
+  background-color: black;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.image-5 {
+  background-image: url("moving-image4.jpg");
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.fadeInClass {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page {
+  box-shadow: 2px 5px 9px red;
+}
+
+.Form2 {
+  display: none;
+  animation: appear 0.6s linear forwards;
+}
+.Form3 {
+  display: none;
+  animation: appear 0.6s linear forwards;
+}
+.progress {
+  background: rgb(207, 10, 17);
+  width: 0%;
+  transition: all linear 0.5s;
+}
+.sidebar {
+  transition: right 0.3s ease-in-out;
+}
+.sidebar.active {
+  right: 0;
+}
+.swiper-wrapper {
+  display: flex !important;
+  justify-content: space-center !important;
+  gap: 20px !important;
+}
+.swiper-slide {
+  width: 300px !important;
+}
+.select-file::before {
+  content: "Select file";
+  color: rgb(207, 10, 17);
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.select-file {
+  background-color: #f8f9fd;
+}
+.select-file.has-file::before {
+  content: attr(data-file-name);
+}
+.select-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+/* Animations */
+@keyframes appear {
+  0% {
+    opacity: 0;
+    /* transform: translateX(15rem); */
+  }
+
+  100% {
+    opacity: 1;
+    /* transform: translateX(0rem); */
+    -webkit-font-smoothing: antialiased;
+  }
+}
