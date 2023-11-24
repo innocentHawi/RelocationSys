@@ -11,12 +11,13 @@ class RelocationController extends Controller
 {
     public function relocate(Request $request){
         //dd('Controller accessed!');
+        //dd($request->all());
 
         $incomingFields = $request->validate([
-            'addressfrom' => ['required', 'min:3', 'max:50'],
-            'addressto' => ['required', 'min:3', 'max:50'],
-            'appartment_from' => ['required', Rule::in(['Mini Flat', 'Flat', 'Terrace', 'Others'])],
-            'appartment_to' => ['required', Rule::in(['Mini Flat', 'Flat', 'Terrace', 'Others'])],
+            'addressfrom' => 'required',
+            'addressto' => 'required',
+            'appartment_from' => ['required', Rule::in(['Mini Flat', 'Flat', 'Terrace','Office Space', 'Others'])],
+            'appartment_to' => ['required', Rule::in(['Mini Flat', 'Flat', 'Terrace','Office Space', 'Others'])],
             'bedroom_from' => 'nullable',
             'bedroom_to' => 'nullable',
             'floor_from' => 'nullable',
@@ -36,9 +37,9 @@ class RelocationController extends Controller
             'Mdate' => 'required',
             'Mtime' => 'nullable',
             'Mtextarea' => 'nullable',
-            'file' => 'nullable|file'
+            'file' => 'nullable|file',
         ]);
-        dd('Controller accessed!');
+        //dd('Controller accessed!');
 
         $incomingFields['addressfrom']=strip_tags($incomingFields['addressfrom']);
         $incomingFields['addressto']=strip_tags($incomingFields['addressto']);
@@ -59,13 +60,15 @@ class RelocationController extends Controller
         }
 
         $incomingFields['checkboxes'] = $checkboxValues;
-        $incomingFields['Mdate']=strip_tags($incomingFields['Mdate']);
+        //$incomingFields['Mdate']=strip_tags($incomingFields['Mdate']);
         $incomingFields['Mtime']=strip_tags($incomingFields['Mtime']);
         $incomingFields['Mtextarea']=strip_tags($incomingFields['Mtextarea']);
         $incomingFields['file'] = $request->file('file')->store('file');
-
+        //dd($request->all());
         
         Relocation::create($incomingFields);
-        return redirect('/index');
+        
+        return redirect('/success');
+
     }
 }

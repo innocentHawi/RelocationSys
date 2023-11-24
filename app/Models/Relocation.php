@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Relocation extends Model
 {
     use HasFactory;
-    protected $table = 'relocations';
+    //protected $table = 'relocations';
 
     protected $fillable = [
         'addressfrom',
@@ -22,12 +22,12 @@ class Relocation extends Model
         'Mfirst_name',
         'Mlast_name',
         'Memail',
-        'mphone',
+        'Mphone',
         'checkboxes',
         'Mdate',
         'Mtime',
         'Mtextarea',
-        'file',
+        'file'
     ];
 
     protected $casts = [

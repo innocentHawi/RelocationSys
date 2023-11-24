@@ -107,13 +107,13 @@
           <div id="form1" class="Form1">
             <div class="form__div w-full flex gap-10 mt-4 mb-6">
               <div class="sub-div w-1/2">
-                <label for="adressfrom" class="block">
+                <label for="addressfrom" class="block">
                   Moving from Adress <font color="red">*</font></label
                 >
                 <input
                   autocomplete="address-line1"
-                  id="adressfrom"
-                  name="adressfrom"
+                  id="addressfrom"
+                  name="addressfrom"
                   placeholder="Enter a place"
                   type="text"
                   class="adj w-full border-b-2 border-secrGrey outline-none focus:border-primaryRed mt-3"
@@ -121,13 +121,13 @@
                 />
               </div>
               <div class="sub-div w-1/2">
-                <label for="adressto">
+                <label for="addressto">
                   Moving to Adress <font color="red">*</font></label
                 >
                 <input
                   autocomplete="address-line1"
-                  name="adressto"
-                  id="adressto"
+                  name="addressto"
+                  id="addressto"
                   placeholder="Enter a place"
                   type="text"
                   class="adj w-full border-b-2 border-secrGrey outline-none focus:border-primaryRed mt-3"
@@ -138,11 +138,11 @@
 
             <div class="form__div w-full flex gap-10 mt-4 mb-6">
               <div class="sub-div w-1/2">
-                <label for="apartment-from" class="block">
+                <label for="appartment_from" class="block">
                   Moving from Apartment <font color="red">*</font>
                 </label>
                 <select
-                  name="apartment_from"
+                  name="appartment_from"
                   class="adj w-full border outline-none mt-3"
                 >
                   <option value="Mini Flat">Mini Flat</option>
@@ -154,11 +154,11 @@
               </div>
 
               <div class="sub-div w-1/2">
-                <label for="apartment-to" class="block">
+                <label for="appartment_to" class="block">
                   Moving to Apartment <font color="red">*</font></label
                 >
                 <select
-                  name="apartment_to"
+                  name="appartment_to"
                   class="adj w-full border outline-none mt-3"
                 >
                   <option value="Mini Flat">Mini Flat</option>
@@ -172,7 +172,7 @@
 
             <div class="form__div w-full flex gap-10 mt-4 mb-6">
               <div class="sub-div w-1/2">
-                <label for="bedroom-from">Moving from Bedroom(s) </label>
+                <label for="bedroom_from">Moving from Bedroom(s) </label>
                 <select
                   name="bedroom_from"
                   class="adj w-full border outline-none mt-3"
@@ -185,7 +185,7 @@
                 </select>
               </div>
               <div class="sub-div w-1/2">
-                <label for="bedroom-to">Moving to Bedroom(s) </label>
+                <label for="bedroom_to">Moving to Bedroom(s) </label>
                 <select
                   name="bedroom_to"
                   class="adj w-full border outline-none mt-3"
@@ -201,7 +201,7 @@
 
             <div class="form__div w-full flex gap-10 mt-4 mb-6">
               <div class="sub-div w-1/2">
-                <label for="floor-from"> Moving from Floor </label>
+                <label for="floor_from"> Moving from Floor </label>
                 <select
                   name="floor_from"
                   class="adj w-full border outline-none mt-3"
@@ -217,7 +217,7 @@
                 </select>
               </div>
               <div class="sub-div w-1/2">
-                <label for="floor-to"> Moving to Floor </label>
+                <label for="floor_to"> Moving to Floor </label>
                 <select
                   name="floor_to"
                   class="adj w-full border outline-none mt-3"
@@ -247,7 +247,7 @@
           <div id="form2" class="Form2">
             <div class="form__div w-full flex gap-10 mt-4 mb-6">
               <div class="sub-div w-1/2">
-                <label for="first-name">
+                <label for="Mfirst_name">
                   First Name <font color="red">*</font>
                 </label>
                 <input
@@ -258,7 +258,7 @@
                 />
               </div>
               <div class="sub-div w-1/2">
-                <label for="last-name">
+                <label for="Mlast_name">
                   Last Name <font color="red">*</font>
                 </label>
                 <input
@@ -272,7 +272,7 @@
 
             <div class="form__div w-full flex gap-10 mt-4 mb-6">
               <div class="sub-div w-1/2">
-                <label for="email"> Email <font color="red">*</font> </label>
+                <label for="Memail"> Email <font color="red">*</font> </label>
                 <input
                   class="adj w-full border-b-2 border-secrGrey py-1 outline-none focus:border-primaryRed"
                   id="first-name"
@@ -281,7 +281,7 @@
                 />
               </div>
               <div class="sub-div w-1/2">
-                <label for="phone"> Phone <font color="red">*</font> </label>
+                <label for="Mphone"> Phone <font color="red">*</font> </label>
                 <input
                   class="adj w-full border-b-2 border-secrGrey py-1 outline-none focus:border-primaryRed"
                   id="phone"
@@ -391,6 +391,7 @@
                       name="Mdate"
                       type="date"
                       class="w-1/2 border p-2 rounded-md outline-none"
+                      value="{{ old('Mdate', \Carbon\Carbon::now()->toDateString()) }}"
                     />
                     <input
                       name="Mtime"

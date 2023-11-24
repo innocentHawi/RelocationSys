@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\RelocationController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Relocation;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,6 @@ Route::get('/index', function () {
 
 
 Route::post('relocate-move', [RelocationController::class, 'relocate'])->name('relocate-move');
+
+Route::get('/success', [ViewController::class, 'dashboard'])->name('success');
+//Route::get('/success', [ViewController::class,'success'])->name('success.view');
